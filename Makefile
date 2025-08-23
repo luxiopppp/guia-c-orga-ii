@@ -1,13 +1,13 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic
-TARGET = hola
+TARGET = sizeof-natives
 
 all: $(TARGET)
 
-$(TARGET): hola.o
+$(TARGET): sizeof-natives.o
 	$(CC) $(CFLAGS) $^ -o $@
 
-hola.o: hola.c
+sizeof-natives.o: sizeof-natives.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
