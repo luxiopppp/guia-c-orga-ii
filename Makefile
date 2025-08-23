@@ -1,13 +1,13 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic
-TARGET = sizeof-natives
+TARGET = sizeof-stdint
 
 all: $(TARGET)
 
-$(TARGET): sizeof-natives.o
+$(TARGET): $(TARGET).o
 	$(CC) $(CFLAGS) $^ -o $@
 
-sizeof-natives.o: sizeof-natives.c
+$(TARGET).o: $(TARGET).c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
