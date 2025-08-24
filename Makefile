@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic
-TARGET = sizeof-stdint
+TARGET = fl_db_cast
 
 all: $(TARGET)
 
