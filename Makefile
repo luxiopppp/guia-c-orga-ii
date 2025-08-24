@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic
-TARGET = fl_db_cast
+TARGET = mensaje_secreto
 
 all: $(TARGET)
 
