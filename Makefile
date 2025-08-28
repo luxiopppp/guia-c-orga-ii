@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -g
-TARGET = dif_i++_++i
+TARGET = mask
 
 all: $(TARGET)
 
