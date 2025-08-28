@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -g
-TARGET = operaciones
+TARGET = dif_i++_++i
 
 all: $(TARGET)
 
