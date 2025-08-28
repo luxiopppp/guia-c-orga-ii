@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -g
-TARGET = mask
+TARGET = ciclo_while
 
 all: $(TARGET)
 
