@@ -1,6 +1,6 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -pedantic
-TARGET = mensaje_secreto
+CFLAGS = -Wall -Wextra -pedantic -g
+TARGET = operaciones
 
 all: $(TARGET)
 
