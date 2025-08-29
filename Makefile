@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -g
-TARGET = rot_arr_gen
+TARGET = dado
 
 all: $(TARGET)
 
