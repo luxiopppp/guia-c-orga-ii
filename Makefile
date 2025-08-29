@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -g
-TARGET = ciclo_while
+TARGET = rot_arr_hc
 
 all: $(TARGET)
 
