@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -g
-TARGET = rot_arr_hc
+TARGET = rot_arr_gen
 
 all: $(TARGET)
 
