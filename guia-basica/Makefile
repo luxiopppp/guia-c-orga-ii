@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -g
-TARGET = dado
+TARGET = var_global_y_local
 
 all: $(TARGET)
 
