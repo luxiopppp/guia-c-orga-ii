@@ -7,6 +7,11 @@ typedef struct {
   double defensa;
 } monstruo_t;
 
+monstruo_t evolution(monstruo_t monstruo) {
+  monstruo.ataque += 10;
+  monstruo.defensa += 10;
+  return monstruo;
+}
 
 int main(void)
 {
@@ -17,12 +22,24 @@ int main(void)
     {"Arnaldo", 1, 653.0, 1.0}
   };
   
-  for (int i = 0; i < sizeof(monstruos) / sizeof(monstruo_t); i++) {
-    printf("%s, %d, %f, %f\n", monstruos[i].nombre, 
-                               monstruos[i].vida,
-                               monstruos[i].ataque,
-                               monstruos[i].defensa);
-  }
+  /* for (int i = 0; i < sizeof(monstruos) / sizeof(monstruo_t); i++) { */
+  /*   printf("%s, %d, %f, %f\n", monstruos[i].nombre,  */
+  /*                              monstruos[i].vida, */
+  /*                              monstruos[i].ataque, */
+  /*                              monstruos[i].defensa); */
+  /* } */
+
+  printf("%s, %d, %f, %f\n", monstruos[0].nombre, 
+                             monstruos[0].vida,
+                             monstruos[0].ataque,
+                             monstruos[0].defensa);
+
+  monstruos[0] = evolution(monstruos[0]);
+
+  printf("%s, %d, %f, %f\n", monstruos[0].nombre, 
+                             monstruos[0].vida,
+                             monstruos[0].ataque,
+                             monstruos[0].defensa);
 
   return 0;
 }
