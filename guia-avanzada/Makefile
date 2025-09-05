@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -g
-TARGET = tira_de_bytes
+TARGET = min_a_mayus
 
 all: $(TARGET)
 
