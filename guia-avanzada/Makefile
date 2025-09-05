@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -g
-TARGET = min_a_mayus
+TARGET = persona
 
 all: $(TARGET)
 
