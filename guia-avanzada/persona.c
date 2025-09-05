@@ -18,12 +18,16 @@ persona_t *crearPersona(char* nombre, uint16_t edad) {
   return persona;
 }
 
+void eliminarPersona(persona_t *persona) {
+  free(persona);
+}
+
 int main()
 {
   persona_t *persona = crearPersona("Jose", 87);
 
   printf("Nombre: %s, Edad: %d", persona->nombre, persona->edad);
-  free(persona);
+  eliminarPersona(persona);
 
   return 0;
 }
