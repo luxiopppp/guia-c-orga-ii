@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -g
-TARGET = persona
+TARGET = lista_enlazada
 
 all: $(TARGET)
 
