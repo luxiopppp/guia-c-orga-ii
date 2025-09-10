@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -g
-TARGET = lista_enlazada
+TARGET = lista_d_enlazada
 
 all: $(TARGET)
 
