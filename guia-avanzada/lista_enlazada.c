@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 typedef uint32_t fat32_t;
@@ -103,13 +104,49 @@ void listDelete(list_t* l) {
   free(l);
 }
 
+void listModify(list_t* l, uint8_t i, uint8_t j) {
+  if (i == j || l == NULL || l->first == NULL || l->first->next == NULL) {
+    return;
+  }
+  
+  if (i > j) { uint8_t tmp = i; i = j; j = tmp; }
+
+  node_t* prevI = NULL;
+  node_t* prevJ = NULL;
+  node_t* nodeI = l->first;
+  node_t* nodeJ = l->first;
+
+  for (uint8_t k = 0; k < i; k++) {
+    prevI = nodeI;
+    nodeI = nodeI->next;
+  }
+
+  for (uint8_t k = 0; k < j; k++) {
+    prevJ = nodeJ;
+    nodeJ = nodeJ->next;
+  }
+
+  if (nodeI == NULL || nodeJ == NULL) return;
+  
+  if (prevI != NULL) prevI->next = nodeJ;
+  else l->first = nodeJ;
+
+  if (prevJ != NULL) prevJ->next = nodeI;
+
+  node_t* tmp = nodeI->next;
+  nodeI->next = nodeJ->next;
+  nodeJ->next = tmp;
+}
+
 int main()
 {
   list_t* l = listNew(TypeFAT32);
   fat32_t* f1 = new_fat32();
   fat32_t* f2 = new_fat32();
+  fat32_t* f3 = new_fat32();
   listAddFirst(l, f1);
   listAddFirst(l, f2);
+  listAddFirst(l, f3);
   listDelete(l);
   rm_fat32(f1);
   rm_fat32(f2);
